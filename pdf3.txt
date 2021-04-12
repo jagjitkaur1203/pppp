@@ -1,0 +1,15 @@
+Data Structure
+
+Queue, Linked Lists, Stacks
+
+Python
+
+Introduction to Pyhton, OOPs concept
+
+Maths
+
+Calculus, Set Theory
+
+Web Analytics
+
+
