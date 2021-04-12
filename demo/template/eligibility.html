@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+    {% block content %}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+      <div class="content-section">
+     
+        
+            <div class="col">
+                <form action="/eligibility" enctype="multipart/form-data" method="post">
+                    <div class="m-3">
+                        
+                        <center><h3>Check Your Eligibility</h3></center>
+        
+                        <div class="mt-3">
+                            <label class="custom-file-upload">Your Prevoius degree syllabus : 
+                                <input type="file" name="file1"/>
+                              
+                            </label>
+                        </div>
+        
+                        <div class="mt-3">
+                            <label class="custom-file-upload">Previous degree syllabus :
+                                <input type="file" name="file2"/>
+                              
+                            </label>
+                        </div>
+                    </div>
+        
+          
+        
+                    <div class="m-3">
+                          <input type="submit" style="margin-top:25px; width: 10em; color: #19c69a;">
+                    </div>
+        
+        
+                </form>
+            </div >
+        
+        
+
+
+    </div> </div><div class="col-sm-2">
+    </div>
+    </div>
+    {% endblock content%}

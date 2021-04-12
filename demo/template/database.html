@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+    {% block content %}
+    <style>
+        td {
+               width: 500px;
+               border: 1px solid black;
+               padding: 5px;
+         }
+            
+       </style>
+    <form method="POST" action="/database">
+        <h1>Database of students</h1>
+        <table> 
+            <thead> 
+            <tr> 
+                <th><center>ID</center></th> 
+                <th><center>Name</center></th> 
+                <th><center>Body</center></th>
+            </tr> 
+            </thead> 
+            <tbody> 
+                {% for row in value %}  
+                    <tr> 
+                        <td>{{row.id}}</td> 
+                        <td>{{row.email}}</td> 
+                        <td>{{row.body}}</td>
+                    </tr> 
+                {% endfor %} 
+            </tbody> 
+        </table> 
+    {% endblock content%}

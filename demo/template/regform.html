@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+    {% block content %}
+    <div class="container">
+        <div class="row">
+                <div class="col-sm-2">
+                </div>
+                    <div class="col-sm-8">
+        <div class="content-section">
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Register</legend>
+                    <div class="form-group">
+                        {{ form.email.label(class="form-control-label") }}
+                        {% if form.email.errors %}
+                            {{ form.email(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.email.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.email(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.contact.label(class="form-control-label") }}
+
+                        {% if form.contact.errors %}
+                            {{ form.contact(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.contact.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.contact(class="form-control form-control-lg") }}
+                            
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                         {{ form.option.label(class="form-control-label") }} 
+                         {{ form.option(class="form-control form-control-lg") }}                           
+                    </div> 
+                    <div class="form-group">
+                         {{ form.option1.label(class="form-control-label") }} 
+                         {{ form.option1(class="form-control form-control-lg") }}                           
+                    </div> 
+                    <div class="form-group">
+                        {{ form.appliedfor.label(class="form-control-label") }} 
+                        {{ form.appliedfor(class="form-control form-control-lg") }}                           
+                   </div> 
+
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-outline-info") }}
+                    </div>
+                </div>
+<div class="col-sm-2">
+</div>
+</div>
+    </div>
+    {% endblock content%}

@@ -1,0 +1,245 @@
+{% extends 'layout.html' %}
+    {% block content %}
+    <div class="container">
+     
+      <div class="content-section">
+      <form method="POST" action="/admission">
+
+          <center><h1>STUDENT ADMISSION FORM</h1><br>
+            <table align="center" cellpadding = "8" border=0.5 >
+            
+             
+            <!----- First Name ---------------------------------------------------------->
+            <tr>
+            <td>FIRST NAME</td>
+            <td><input type="text" name="First_Name" maxlength="30"/>
+            <small>(max 30 characters a-z and A-Z)</small>
+            </td>
+            </tr>
+             
+            <!----- Last Name ---------------------------------------------------------->
+            <tr>
+            <td>LAST NAME</td>
+            <td><input type="text" name="Last_Name" maxlength="30"/>
+             <small>            (max 30 characters a-z and A-Z)
+            </small>   
+            </td>
+            </tr>
+             
+            <!----- Date Of Birth -------------------------------------------------------->
+            <tr>
+            <td>DATE OF BIRTH</td>
+            <td>
+            <input type="date" name="date">
+            </td>
+            </tr>
+             
+            <!----- Email Id ---------------------------------------------------------->
+            <tr>
+            <td>EMAIL ID</td>
+            <td><input type="email" name="Email" maxlength="100" /></td>
+            </tr>
+             
+            <!----- Mobile Number ---------------------------------------------------------->
+            <tr>
+            <td>MOBILE NUMBER</td>
+            <td>
+            <input type="number" name="Mobile" maxlength="10" />
+            <small>            (10 digit number)
+            </small>
+            </td>
+            </tr>
+             
+            <!----- Gender ----------------------------------------------------------->
+            <tr>
+            <td>GENDER</td>
+            <td>
+            Male <input type="radio" name="Gender" value="Male" />
+            Female <input type="radio" name="Gender" value="Female" />
+            </td>
+            </tr>
+             
+            <!----- Address ---------------------------------------------------------->
+            <tr>
+            <td>ADDRESS <br /><br /><br /></td>
+            <td><textarea name="Address" rows="4" cols="30"></textarea></td>
+            </tr>
+             
+            <!----- City ---------------------------------------------------------->
+            <tr>
+            <td>CITY</td>
+            <td><input type="text" name="City" maxlength="30" />
+            (max 30 characters a-z and A-Z)
+            </td>
+            </tr>
+             
+            <!----- Pin Code ---------------------------------------------------------->
+            <tr>
+            <td>PIN CODE</td>
+            <td><input type="text" name="Pin_Code" maxlength="6" />
+            <small>(6 digit number)</small>    
+            </td>
+            </tr>
+             
+            <!----- State ---------------------------------------------------------->
+            <tr>
+            <td>STATE</td>
+            <td><input type="text" name="State" maxlength="30" />
+            <small>(max 30 characters a-z and A-Z)</small>
+            </td>
+            </tr>
+             
+            <!----- Country ---------------------------------------------------------->
+            <tr>
+            <td>COUNTRY</td>
+            <td><input type="text" name="Country" value="India" readonly="readonly" /></td>
+            </tr>
+             
+            <!----- Hobbies ---------------------------------------------------------->
+             
+            <tr>
+            <td>HOBBIES <br /><br /><br /></td>
+             
+            <td>
+            Drawing
+            <input type="checkbox" name="Hobby_Drawing" value="Drawing" />
+            Singing
+            <input type="checkbox" name="Hobby_Singing" value="Singing" />
+            Dancing
+            <input type="checkbox" name="Hobby_Dancing" value="Dancing" />
+            Sketching
+            <input type="checkbox" name="Hobby_Cooking" value="Cooking" />
+            <br />
+            Others
+            <input type="checkbox" name="Hobby_Other" value="Other">
+            <br>
+            <input type="text" name="Other_Hobby" maxlength="30" />
+            </td>
+            </tr>
+             
+            <!----- Qualification---------------------------------------------------------->
+            <tr>
+            <td>QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
+             
+            <td>
+            <table>
+             
+            <tr>
+            <td align="center"><b>Sl.No.</b></td>
+            <td align="center"><b>Examination</b></td>
+            <td align="center"><b>Board</b></td>
+            <td align="center"><b>Percentage</b></td>
+            <td align="center"><b>Year of Passing</b></td>
+            </tr>
+             
+            <tr>
+            <td>1</td>
+            <td>Class X</td>
+            <td><input type="text" name="ClassX_Board" maxlength="30" /></td>
+            <td><input type="text" name="X_Percentage" maxlength="30" /></td>
+            <td><input type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
+            </tr>
+             
+            <tr>
+            <td>2</td>
+            <td>Class XII</td>
+            <td><input type="text" name="ClassXII_Board" maxlength="30" /></td>
+            <td><input type="text" name="XII_Percentage" maxlength="30" /></td>
+            <td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" /></td>
+            </tr>
+             
+            <tr>
+            <td>3</td>
+            <td>Graduation</td>
+            <td><input type="text" name="Graduation_Board" maxlength="30" /></td>
+            <td><input type="text" name="Graduation_Percentage" maxlength="30" /></td>
+            <td><input type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
+            </tr>
+             
+             
+            <tr>
+            <td></td>
+            <td></td>
+            <td align="center"><small>(10 char max)</small></td>
+            <td align="center"><small>(upto 2 decimacoursel)</small></td>
+            </tr>
+            </table>
+             
+            </td>
+            </tr>
+             
+            <!----- Course ---------------------------------------------------------->
+            <tr>
+            <td>UG COURSES<br />APPLIED FOR</td>
+            <td>
+            <input type="radio" name="Course" value="BCA">
+            BCA
+            <input type="radio" name="Course" value="B.Tech."> 
+            B.Tech.
+            <select id="B.Tech" name="b_tech">
+            <option value="-1">Course:</option>
+            <option value="Chemical_Engineering">Chemical Engineering</option>
+            <option value="Civil_Engineering">Civil Engineering</option>
+            <option value="Bio_Technology_Engineering">Bio-Technology Engineering</option>
+            <option value="Electronics_Comunnication_Engineering">Electronics & Comunnication Engineering</option>
+            <option value="Mechanical_Engineering">Mechanical Engineering</option>
+            <option value="Computer_Science_Engineering">Computer science Engineering</option>
+            <option value="Information_Technology">Information Technology</option>
+            <option value="Food_Technology">Food & Technology</option>
+            </select>
+            <input type="radio" name="Course" value="B.Sc.">
+            B.Sc.
+            <select id="BSc" name="BSc">
+            <option value="-1">Course:</option>
+            <option value="CS">Computer Science</option>
+            <option value="IT">Information Technology</option>
+            </select>
+            </td>
+            </tr>
+            
+            <!----- Course ---------------------------------------------------------->
+            <tr>
+            <td>PG COURSES<br />APPLIED FOR</td>
+            <td>
+            
+            <input type="radio" name="MCourse" value="M.Com">
+            MCA
+            <input type="radio" name="MCourse" value="M.Sc">
+            M.Tech.
+            <select id="Msc_Course" name="msc_course"/>
+            <option value="-1">Course:</option>
+            <option value="Chemical_Engineering">Chemical Engineering</option>
+            <option value="Civil_Engineering">Civil Engineering</option>
+            <option value="Bio_Technology_Engineering">Bio-Technology Engineering</option>
+            <option value="Electronics_Comunnication_Engineering">Electronics & Comunnication Engineering</option>
+            <option value="Mechanical_Engineering">Mechanical Engineering</option>
+            <option value="Computer_Science_Engineering">Computer science Engineering</option>
+            <option value="Information_Technology">Information Technology</option>
+            <option value="Food_Technology">Food & Technology</option>
+            <option value="AI_DS">Artificial Intelligence & Data Science</option>
+            </select>
+            <input type="radio" name="MCourse" value="MCA"/>
+            MCA
+            <select id="MCAcourse" name="MCAcourse">
+            <option value="-1">Course:</option>
+            <option value="CS">Computer Science</option>
+            <option value="IT">Information Technology</option>
+            <option value="AI_DS">Artificial Intelligence & Data Science</option>
+            </select>
+            None
+            <input type="radio" name="MCourse" value="none">
+            </td>
+            </tr>
+             
+            <!----- Submit and Reset ------------------------------------------------->
+            <tr>
+            <td colspan="2" align="center">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            </td>
+            </tr>
+            </table>
+   </form>
+   
+    </div>
+    {% endblock content%}
